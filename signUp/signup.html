@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            font-family: sans-serif;
+        }
+        #nav
+        {
+            /*border: red solid 1px;*/
+            width: 100%;
+            height: 50px;
+        }
+        #nav>img
+        {
+            height: 80%;
+            width: 150px;
+            margin-left: 560px;
+        }
+        #container
+        {
+            width: 30%;
+            height: 550px;
+            /*border: red solid 1px;*/
+            margin:auto;
+        }
+        .in
+        {
+            width: 97%;
+            height: 43px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            border: 0.5px solid grey;
+        }
+        .in::placeholder
+        {
+            font-size: 15px;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        
+        input[type="checkbox"]
+        {
+            cursor: pointer;
+            color: blue;
+        }
+        #check
+        {
+            width: 25px;
+            height: 25px;
+        }
+        button
+        {
+            width: 98%;
+            height: 43px;
+            border-radius: 7px;
+            background-color: rgb(183,199,241);
+            color: white;
+            font-size: 20px;
+            margin-bottom: 30px;
+            border: none;
+        }
+        button:hover
+        {
+            cursor: pointer;
+            background-color: rgb(60,107,220);
+        }
+        a
+        {
+            text-decoration: none;
+        }
+        #logos
+        {
+            width: 27%;
+            height: 40px;
+            margin: auto;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #logos>img{
+            width: 18px;
+            height: 18px;
+        }
+        p
+        {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <img src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27"/>
+    </div>
+    <hr>
+    <div id="container">
+        <h1>Create an account</h1>
+        <input id="email" class="in" type="email" placeholder="Email address"/>
+        <input id="fn" class="in" type="text" placeholder="First name"/>
+        <input id="sn" class="in" type="text" placeholder="Surname"/>
+        <input id="pass" class="in" type="password" placeholder="Password" />
+        <div style="display: flex;">
+        <input id="check" type="checkbox" />
+        <p>Keep me signed in</p>
+        </div>
+        <p style="font-size: 14px;">By signing in, I agree to the Expedia <a href="https://www.expedia.co.in/terms">Terms and Conditions</a>, <a href="https://www.expedia.co.in/privacy">Privacy Statement</a> and <a href="https://www.expedia.co.in/rewards/terms">Expedia Rewards Terms and Conditions</a>.</p>
+        <button>Continue</button>
+        <br>
+        <p style="text-align: center;">Already have an account?<a href="Signin.html">Sign in</a></p>
+        <p style="text-align:center;margin-top: 20px;">or continue with</p>
+        <div id="logos">
+            <img src="https://a.travel-assets.com/egds/marks/apple.svg" />
+            <img src="https://a.travel-assets.com/egds/marks/facebook.svg" />
+            <img src="https://a.travel-assets.com/egds/marks/google.svg" />
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",formSubmit);
+    var userStack = JSON.parse(localStorage.getItem("UserDatabase"))||[];
+    
+    function formSubmit(event)
+    {
+        var email = document.querySelector("#email").value;
+        var pass = document.querySelector("#pass").value;
+        var fn = document.querySelector("#fn").value;
+        var sn = document.querySelector("#sn").value;
+
+        var userData = {
+        EmailAdd:email,
+        Password:pass,
+        FirstName:fn,
+        SurNAme:sn
+        }
+       // console.log(userData);
+        userStack.push(userData);
+       // console.log(userStack)
+       localStorage.setItem("UserDatabase",JSON.stringify(userStack));
+       alert("Signup Success");
+       window.location.href="Signin.html";
+    }    
+</script>
