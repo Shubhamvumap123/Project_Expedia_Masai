@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      var expediaData = [
+    {
+      id: 5,
+      name: "Radisson Blu Kaushambi Delhi NCR",
+      image:
+        "https://images.unsplash.com/photo-1571275293295-7a6d0d4dadd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjBmcm9udHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      offer: 4988,
+      location:"New Delhi",
+      rating:"4.6/5(232 reviews)",
+      price:4489,
+      date:"Mon,21 Feb - Web,23Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Ambassador, New Delhi - IHCL SeleQtions",
+      image:
+        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWwlMjBmcm9udHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      offer: 6699,
+      location:"New Delhi",
+      rating:"4.2/5 very ggod(304 reviews)",
+      price:5359,
+      date:"Web, 23 - Fri,23 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Vivanta Surajkund,NCR",
+      image:
+        "https://images.unsplash.com/photo-1568229988520-4bc288da81f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+      offer: 6438,
+      location:"Delhi",
+      rating:"4.4/5 (252 reviews)",
+      price:5794,
+      date:"Mon,11 Apr - Wed,13Apr",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "The Leela Mumbai",
+      image:
+        "https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+      offer: 66500,
+      location:"Mumbai",
+      rating:"4.5/5 (981 reviews)",
+      price:5985,
+      date:"Mon,11 Apr - Wed,13Apr",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Trident Bandra Kurla Mumbai",
+      image:
+        "https://images.unsplash.com/photo-1565262353342-6e919eab5b58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWwlMjBmcm9udHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
+      offer: 8075,
+      location:"Mumbai",
+      rating:"4.5/5 (653 reviews)",
+      price:7268,
+      date:"Mon,11 Apr - Wed,13Apr",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Oakwood Residence Kapli Hyderabad",
+      image:
+        "https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+      offer: 4350,
+      location:"Hyderabad",
+      rating:"4.3/5 (49 reviews)",
+      price:3915,
+      date:"Mon,11 Apr - Wed,13Apr",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Novotel Hyderabad ",
+      image:
+        "https://images.unsplash.com/photo-1524932563317-9962c267d8bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+      offer: 4749,
+      location:"Hyderabad",
+      rating:"4.0/5 (140 reviews)",
+      price:4749,
+      date:"Fri, 11 Mar - Sat,13 Mar",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Sayaji Indore",
+      image:
+        "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+      offer: 7975,
+      location:"Indore",
+      rating:"4.3/5 (54 reviews)",
+      price:5742,
+      date:"Fri,25 - Sun, 27 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Effotel Hotel Indore",
+      image:
+        "https://media.istockphoto.com/photos/singapore-raffles-historic-colonial-landmark-picture-id155375440?b=1&k=20&m=155375440&s=170667a&w=0&h=Q_f2cIa0mMS8IiG7ITZe2Rj-nUJ-j20AXx4epP3OQVs=",
+      offer: 5874,
+      location:"Indore",
+      rating:"4.3/5 (1304 reviews)",
+      price:4112,
+      date:"Sat, 19 Feb - Mon, 21 feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Vivanta Bengaluru, Whitefield",
+      image:
+        "https://media.istockphoto.com/photos/road-front-of-luxury-building-in-clear-sky-at-night-picture-id503019528?b=1&k=20&m=503019528&s=170667a&w=0&h=3B1ZcdzUFDGh1SfxJsF95VQ9-Hm2ae_W2swOAUHq5Ug=",
+      offer: 3000,
+      location:"Bengaluru",
+      rating:"4.3/5 (73 reviews)",
+      price:2700,
+      date:"Fri, 1 Apr - Sun, 3 Apr",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Sterlings Mac Hotel",
+      image:
+        "https://media.istockphoto.com/photos/apartment-home-residential-building-complex-street-parking-picture-id1084106348?b=1&k=20&m=1084106348&s=170667a&w=0&h=hvz-hMjp68Nnpj4a-yvJWjv-QQ1GNP5ijRBkLYPbH2U=",
+      offer: 4900,
+      location:"4,172",
+      rating:"4.2/5 (34 reviews)",
+      price:3900,
+      date:"Sat, 12 Mar - Mon 14 Mar",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Signature Club Resort",
+      image:
+        "https://media.istockphoto.com/photos/raffles-hotel-picture-id175008615?b=1&k=20&m=175008615&s=170667a&w=0&h=osW0XVdF4JnJIHVpITVv3P0oJ9FUAqwIhYa4GFsu_ZA=",
+      offer: 7500,
+      location:"Bengaluru",
+      rating:"4.2/5 (304 reviews)",
+      price:6750,
+      date:"Fri, 18 Feb- Sun,20 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Welcomehotel",
+      image:
+        "https://media.istockphoto.com/photos/luxury-construction-hotel-with-swimming-pool-at-sunset-picture-id903417402?b=1&k=20&m=903417402&s=170667a&w=0&h=ZmirQvTTWNy0JcJDaZrm3IW50LNgra8EKmf5ux9HN_w=",
+      offer: 5700,
+      location:"Chennai",
+      rating:"4.5/5 (30 reviews)",
+      price:5130,
+      date:"Fri, 18 Feb - Sun,20 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "GRT Hotels",
+      image:
+        "https://media.istockphoto.com/photos/fountain-at-complex-of-apartment-residential-buildings-quarter-picture-id949087660?b=1&k=20&m=949087660&s=170667a&w=0&h=Bd-PmsTqqIuVNCaW6euhYqY-enu43-npOJz_Ec-FToE=",
+      offer: 4410,
+      location:"",
+      rating:"4.2/5 (304 reviews)",
+      price:3528,
+      date:"Sat, 12 Mar - Mon, 14 Mar",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "The Residency Towers",
+      image:
+        "https://images.unsplash.com/photo-1515733392795-4fbb2be3d1dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+      offer: 5149,
+      location:"Channai",
+      rating:"4.2/5 (346 reviews)",
+      price:4634,
+      date:"Web, 23 Feb - Fri,25 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Trident, Jaipur",
+      image:
+        "https://images.unsplash.com/photo-1538991567239-bc8a062ae36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+      offer: 6175,
+      location:"Jaipur",
+      rating:"4.2/5 (304 reviews)",
+      price:5558,
+      date:"Mon, 21 Feb - Web,23 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "The Oberoi Rajvilas",
+      image:
+        "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+      offer: 26600,
+      location:"Jaipur",
+      rating:"4.2/5 (304 reviews)",
+      price:23940,
+      date:"Mon, 21 Feb - Web,23 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Vivanta Goa, Panaji",
+      image:
+        "https://images.unsplash.com/photo-1605538108568-7f0d77a214c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fGhvdGVsJTIwZnJvbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+      offer: 5850,
+      location:"Goa",
+      rating:"4.2/5 (304 reviews)",
+      price:5265,
+      date:"Thu, 31 Mar - Sat, 2 Apr",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Taj City Gurugram",
+      image:
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      offer: 7125,
+      location:"Gurugram",
+      rating:"4.5/5 (224 reviews)",
+      price:6412,
+      date:"Fri, 11 Mar - Sun,13 Mar",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "The Oberoi Cecil, Shilma",
+      image:
+        "https://images.unsplash.com/photo-1518733057094-95b53143d2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      offer: 12350,
+      location:"Shimla",
+      rating:"4.2/5 (204 reviews)",
+      price:11115,
+      date:"Mon, 28 Feb - Web,2 Mar",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Crystal Sarover Premier",
+      image:
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      offer: 4550,
+      location:"Agra",
+      rating:"4.5/5 (34 reviews)",
+      price:3412,
+      date:"Sun, 20 Feb - tue, 22 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Hotel Sayaji Raipur",
+      image:
+        "https://images.unsplash.com/photo-1562133567-b6a0a9c7e6eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      offer: 11700,
+      location:"Raipur",
+      rating:"4.3/5 (304 reviews)",
+      price:8775,
+      date:"Sat, 19 Feb - Mon, 21 Feb",
+      line:"",
+      night:"per night",
+    },
+    {
+      id: 5,
+      name: "Nature Heritage Resort",
+      image:
+        "https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      offer: 7000,
+      location:"Bandhograh",
+      rating:"4.5/5 (3143 reviews)",
+      price:6300,
+      date:"Sat, 19 Feb - Mon,21 Feb",
+      line:"",
+      night:"per night",
+    },
+];
+localStorage.setItem("expediaData",JSON.stringify(expediaData))
+</script>
