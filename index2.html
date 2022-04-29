@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <style>
+        body{
+            margin: 10%;
+        }
+        .scheck{
+color: black;
+margin-top: 30px;
+display: flex; 
+   
+}
+
+.sinpdate1{
+border-radius: 5px;
+ height: 40px;
+width: 60%;
+border:black 0.5px solid;
+margin-left:5px ;
+}
+
+.sinptext1{
+border-radius: 5px;
+ height: 40px;
+  width: 95%;
+  border:black 0.5px solid;
+}
+.sinptext2{
+border-radius: 5px;
+height: 40px;
+border:black 0.5px solid;
+width: 95%;
+margin-left: 5px;
+font-size: 10px;
+   
+}
+.sdate{
+    
+    display:flex;
+    width: 40%; margin-left: -15px;
+}
+.inputbig{
+    width: 100%;
+display: flex;
+
+}
+.sinput{
+    width:50%;
+   
+    
+}
+.sicon{
+    margin-left:auto ;
+    width: 30%;
+   
+}
+.btn{
+     height: 48px; 
+     width: 165px;
+     background-color: #3662d8;
+     margin-top: 2%; 
+     border-radius: 0.5rem;
+     border: none;
+     color:white;
+}
+.btn:hover{
+   background-color: #1147db;
+   cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="mySlides" style="width:100%; height: 200px;">
+        <div class="inputbig">
+     <div class="sinput">   <i  style="position:absolute; margin-top: 10px; padding: 5px;" class="fas fa-search-location"></i>
+        <input class="sinptext1" type="text" value="&#160&#160&#160&#160&#160Going to"> 
+    </div>
+        <div class="sdate">
+            <input class="sinpdate1" type="date" value="check-In"><input class="sinpdate1" type="date" value="check-In">
+    </div>
+       <div class="sicon">
+        <i class="fas fa-user"style="margin-left:10px ; position:absolute; margin-top: 15px;"></i>
+        <input class="sinptext2" type="text" value="&#160&#160&#160&#160&#160&#160&#160Travelers"> 
+    </div>
+    </div>
+     
+        <div ><button class="btn" onclick="">Search</button></div>
+    </div>
+    <script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+</body>
+</html>

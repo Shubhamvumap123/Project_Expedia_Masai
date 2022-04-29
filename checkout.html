@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="expedia.css">
+    <link rel="shortcut icon" href="download.png">
+    <title>Check Out Page</title>
+    <style>
+       
+
+        
+
+        #expmonth {
+            border-radius: 5px;
+            width: 100px;
+            height: 40px;
+        }
+
+        .row {
+           width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+                        /* border: solid; */
+                        justify-content: center;
+                        
+        }
+
+        .col-25,
+        .col-50,
+        .col-75 {
+            padding: 0 16px;
+        }
+
+        .container {
+            background-color: #f2f2f2;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+
+        .btn {
+         
+            color: white;
+            background-color:  rgb(60, 107, 220);
+            /* padding: 12px;
+            margin: 10px 0; */
+            margin-top: 50px;
+            margin-left: 6%;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+           
+        }
+
+        .btn:hover {
+            color: white;
+            background-color:  rgb(2, 20, 59);
+            transition: 0.5s;
+            
+        }
+
+        a {
+            color: #2196F3;
+        }
+
+        hr {
+            border: 1px solid lightgrey;
+        }
+
+        span.price {
+            float: right;
+            color: grey;
+        }
+
+     
+        @media (max-width: 800px) {
+            .row {
+                flex-direction: column-reverse;
+            }
+
+            .col-25 {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fathercont">
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    
+    
+                        <div class="row">
+                            <div class="col-50">
+    
+                                <div class="col-50">
+                                    <h3>Payment</h3>
+                                    <label for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    </div>
+                                    <label for="cname">Name on Card</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="Shubham Umap">
+                                    <label for="ccnum">Credit card number</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label for="expmonth">Exp Month</label>
+                                    <!-- <input type="text" id="expmonth" name="expmonth" placeholder="September"> -->
+                                    <select name="credit card" id="expmonth">
+                                        <option value="">Month</option>
+                                        <option value="">01-jan</option>
+                                        <option value="">02-feb</option>
+                                        <option value="">03-march</option>
+                                        <option value="">04-april</option>
+                                        <option value="">04-may</option>
+                                        <option value="">05-june</option>
+                                        <option value="">06-july</option>
+                                        <option value="">07-Aug</option>
+                                    </select>
+                                    <select name="credit card" id="expmonth">
+                                        <option value="">Year</option>
+                                        <option value="">2022</option>
+                                        <option value="">2023</option>
+                                        <option value="">2024</option>
+                                        <option value="">2025</option>
+                                        <option value="">2026</option>
+                                        <option value="">2027</option>
+                                        <option value="">2028</option>
+                                        <option value="">2029</option>
+                                    </select>
+    
+    
+                                    <div class="row">
+    
+                                        <div class="col-50">
+                                            <label for="cvv">Security code</label>
+                                            <input type="text"  placeholder="1234" style="width: 300px;">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="cvv">Pan</label>
+                                            <input type="text" style="width: 300px;">
+                                        </div>
+                                    </div>
+                                    
+                                    <label for="expmonth">Billing Country</label>
+                                    <select name="credit card" style="width: 200px;height: 40px;border-radius: 5px;">
+                                        <option value="">India</option>
+                                        <option value="">Aus</option>
+                                        <option value="">ireland</option>
+                                        <option value="">US</option>
+                                        <option value="">Israel</option>
+                                        <option value="">Jermany</option>
+                                        
+                                    </select>
+    
+                                </div>
+    
+                            </div>
+                           
+                            <!-- <input type="submit" value="Booking" class="btn" href="book.html" > -->
+                       
+                    
+                </div>
+               
+                
+            </div>
+            <button class="btn"style="width: 400px;height: 40px;" ; onclick="window.location.href='aftercheckout.html'">
+                   <h4 style="color: rgb(255, 255, 255);margin: 0px;">BOOKING</h4>
+            </button>
+            
+               
+        </div>
+    
+
+    </div>
+
+    
+</body>
+
+</html>

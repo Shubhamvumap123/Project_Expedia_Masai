@@ -164,6 +164,7 @@ margin-top: 30px;
 }
 #pchk1{
     margin-top: 20px;
+    font-size: 10px;
 }
 .tinptext{
     border-radius: 5px; 
@@ -175,7 +176,7 @@ margin-top: 30px;
 .tinpdate{
     border-radius: 5px; 
     height: 40px; 
-    width: 24%; 
+    width: 22%; 
     border:black 1px solid;
 }
 .bigbox{
@@ -254,7 +255,6 @@ margin-top: -10px;
 
 .col1>.button1{
 color: black;
-
 }
 .button1:hover, button:focus {
 background:lavender;
@@ -268,15 +268,13 @@ background-color: white;
 border-radius: 0.5rem;
 border: none; color:black;
 font-weight: light;
-font-size: 12px;
-
-}
+font-size: 12px;}
 .w3-content{
-    max-width:1000px; 
+    max-width: 100%;
     border: 1px solid grey;
     border-radius: 8px; 
     margin: 40px; 
-    margin-left:10%;
+    /* margin-left:10%; */
 }
 .fbig{
     display: flex;
@@ -328,25 +326,32 @@ font-size: 12px;
      border:black 0.5px solid;
 }
 @media only screen and (max-width: 990px) {
-
+.pbig{
+    display: block;
+}
 .psmall1{
     width: 95%;
-display: block;
+
 }
 .psmall2{
+
   width:95%;
   margin-left: -15px;
 }
 
 
 .pinptext{
-    border-radius: 10px; 
+ 
+    border-radius: 5px; 
     height: 40px; 
-    width: 95%;
+    width: 48%;
     border:black 0.5px solid;
 }
 .pinpdate{
-    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: -15px;
+    border-radius: 5px;
      height: 40px; 
      width: 48%; 
      border:black 0.5px solid;

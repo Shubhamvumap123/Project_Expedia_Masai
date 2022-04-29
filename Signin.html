@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="download.png">
     <style>
         *
         {
@@ -29,19 +30,17 @@
             /*border: red solid 1px;*/
             margin:auto;
         }
-        .in
+        input
         {
             width: 97%;
-            height: 43px;
-            border-radius: 7px;
+            height: 35px;
+            border-radius: 5px;
             margin-bottom: 20px;
-            border: 0.5px solid grey;
         }
-        .in::placeholder
+        input::placeholder
         {
             font-size: 15px;
             margin-left: 20px;
-            padding-left: 10px;
         }
         
         input[type="checkbox"]
@@ -57,18 +56,19 @@
         button
         {
             width: 98%;
-            height: 43px;
-            border-radius: 7px;
+            height: 40px;
+            /*border: red solid 1px;*/
+            border-radius: 5px;
             background-color: rgb(183,199,241);
             color: white;
             font-size: 20px;
             margin-bottom: 30px;
             border: none;
         }
-        button:hover
+        #fp
         {
-            cursor: pointer;
-            background-color: rgb(60,107,220);
+            text-decoration: none;
+            margin-left: 140px;
         }
         a
         {
@@ -76,42 +76,42 @@
         }
         #logos
         {
-            width: 27%;
+            width: 30%;
             height: 40px;
+           /* border:red solid 1px;*/
             margin: auto;
-            margin-top: 10px;
+            margin-top: -5px;
             display: flex;
             justify-content: space-between;
         }
         #logos>img{
-            width: 18px;
-            height: 18px;
+            width: 21px;
+            height: 21px;
         }
-        p
+        .in
         {
-            font-size: 14px;
+            border: 0.5px solid grey;
         }
     </style>
 </head>
 <body>
     <div id="nav">
-        <img src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27"/>
+        <img onclick="window.location.href='home.html'" src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27"/>
     </div>
     <hr>
     <div id="container">
-        <h1>Create an account</h1>
+        <h1>Sign in</h1>
         <input id="email" class="in" type="email" placeholder="Email address"/>
-        <input id="fn" class="in" type="text" placeholder="First name"/>
-        <input id="sn" class="in" type="text" placeholder="Surname"/>
         <input id="pass" class="in" type="password" placeholder="Password" />
         <div style="display: flex;">
         <input id="check" type="checkbox" />
         <p>Keep me signed in</p>
         </div>
         <p style="font-size: 14px;">By signing in, I agree to the Expedia <a href="https://www.expedia.co.in/terms">Terms and Conditions</a>, <a href="https://www.expedia.co.in/privacy">Privacy Statement</a> and <a href="https://www.expedia.co.in/rewards/terms">Expedia Rewards Terms and Conditions</a>.</p>
-        <button>Continue</button>
+        <button>Sign in</button>
         <br>
-        <p style="text-align: center;">Already have an account?<a href="Signin.html">Sign in</a></p>
+        <a id="fp" href="https://www.expedia.co.in/forgotpassword?ckoflag=0&uurl=e3id%3Dredr%26rurl%3D%2F&enable_ulfp=true">Forgot password?</a>
+        <p style="text-align: center;">Don't have an account?<a href="Signup.html">Create one</a></p>
         <p style="text-align:center;margin-top: 20px;">or continue with</p>
         <div id="logos">
             <img src="https://a.travel-assets.com/egds/marks/apple.svg" />
@@ -122,27 +122,26 @@
 </body>
 </html>
 <script>
-    document.querySelector("button").addEventListener("click",formSubmit);
-    var userStack = JSON.parse(localStorage.getItem("UserDatabase"))||[];
-    
-    function formSubmit(event)
+    document.querySelector("button").addEventListener("click",login);
+    var regdUsers = JSON.parse(localStorage.getItem("UserDatabase"));
+
+    function login(event)
     {
         var email = document.querySelector("#email").value;
         var pass = document.querySelector("#pass").value;
-        var fn = document.querySelector("#fn").value;
-        var sn = document.querySelector("#sn").value;
-
-        var userData = {
-        EmailAdd:email,
-        Password:pass,
-        FirstName:fn,
-        SurNAme:sn
+        
+        
+        for(var i=0;i<regdUsers.length;i++)
+        {   
+            if(regdUsers[i].EmailAdd == email && regdUsers[i].Password == pass)
+            {
+                console.log("Sign in successful");
+                alert("Sign in Successful")
+                window.location.href="home.html";
+                return;
+            }
+           
         }
-       // console.log(userData);
-        userStack.push(userData);
-       // console.log(userStack)
-       localStorage.setItem("UserDatabase",JSON.stringify(userStack));
-       alert("Signup Success");
-       window.location.href="Signin.html";
-    }    
+        alert("Username or password is wrong");
+    }
 </script>

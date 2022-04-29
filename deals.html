@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+    
+
+
+    <style>
+        body{
+            width: 65%;
+  margin: auto;
+      overflow: hidden;
+}
+.FixedHeightContainer
+{   
+    height: 100vh;   
+    padding:3px; 
+    background:white;
+      overflow: auto;
+      width: 96%;
+      margin-left: 4%;
+      border: 1px solid white;
+}
+.box3{
+    border: 1px solid white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 50px;
+
+}
+.col3{
+    height: 47px;
+    width: 386px;
+    border:black 0.5px solid;
+    display: flex;
+}
+.box3>div{
+    border-radius: 0.5rem;
+    border:black 0.5px solid;
+    margin-left: 15px;
+
+}
+#nav {
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+            height: 80px;
+            width: 100%;
+            margin: auto;
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            margin-bottom: 50px;
+           
+        }
+
+        .brand-logo {
+            background-color: #fff;
+            box-shadow: 0px 1px 0px 0px rgb(0 11 38 / 12%);
+            margin: 20px 30px 30px;
+        }
+
+        #img {
+            color: black;
+        }
+
+        .travel {
+            width: auto;
+            border: none;
+            position: absolute;
+            transform: translate(-56%, -50%);
+
+            box-sizing: border-box;
+            background-color: none;
+            margin: 34px 91px 40px;
+
+        }
+
+        .nav1 {
+            display: flex;
+            padding: 20px;
+            justify-content: end;
+            width: 100%;
+
+        }
+
+        .nav1>div {
+            margin: 10px;
+        }
+
+
+
+#box1{
+    width: 100%;
+    height: 45px;
+            border: 1px solid rgb(250, 251, 252);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .button:hover{
+            background-color:rgb(43, 81, 185);
+           
+           outline: 0;
+           color:royalblue;
+        }
+        .box2{
+            width: 100%;
+            height: 45px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: space-between;
+        }
+        .p1{
+            border: 1px solid white;
+            width: 18%;
+            height: 100%;
+            border-radius: 5px;
+            margin: 0px;
+            text-align: center;
+    
+
+        }
+        .box4{
+            border: 1px solid white;
+            height: 470px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-left: 3%;
+
+        }
+        .col4{
+            width: 49%;
+            height: 100%;
+            border: 1px solid white;
+
+        }
+       .box5{
+           height: 100px;
+           width: 100%;
+           border: 1px solid white;
+
+       }
+       .box6{
+            border: 1px solid  rgb(248,245,244);
+            height: 280px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        
+
+        }
+        .col3{
+            width: 49%;
+            height: 380px;
+            border: 1px solid  rgb(248,245,244);
+            display: block;
+
+
+        }
+        #container{
+            height: 600px;
+            border: 1px solid white;
+            width: 100%;
+            background-color: rgb(248,245,244);
+        }
+        .box3{
+            height: 50px;
+            width: 100%;
+            border: 1px solid white;
+            margin: 0px;
+        }
+
+        .button1{
+    
+         height: 45px;
+         width: 150px;
+    background-color: #1e34b1;
+    margin-left: 0px;
+    margin-top: 18px; 
+    border-radius: 0.5rem;
+    border: none; color: rgb(250, 245, 245);
+    margin-bottom: 60px;
+
+}
+        .button1:hover, .button1:focus {
+    background:rgb(39, 39, 206);
+    outline: 0;
+}
+        .col2{
+    height: 47px;
+    border:black 0.5px solid;
+    display: flex;
+}       
+.col1:hover,.col1:focus{
+    background:rgb(21, 21, 177);
+    outline: 0;
+    color: white;
+}
+.col1{
+    background-color: white;
+    color: black;
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <div id="nav" onchange="front_page()">
+        <div class="brand-logo" data-testid="header-brand-logo-anchor" onclick="window.location.href='home.html'"><img
+                src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&amp;siteid=27&amp;2"
+                alt="expedia logo"></a>
+        </div>
+        <div>
+            <select name="MOre Travel" class="travel">
+
+                <option style="position: sticky;" value="text" href>More travel </option>
+                <option value="fas fa-plane">&#xf072;Flit</option>
+                <option value="stays">Car</option>
+                <option value="stays">Package</option>
+                <option value="stays">Holiday Activity</option>
+            </select>
+        </div>
+        <div class="nav1">
+
+            <div onclick="window.location.href='men.html'">English</div>
+            <div onclick="window.location.href='women.html'">Support</div>
+            <div onclick="window.location.href='women.html'">Trip</div>
+            <div><a href="">Sign In</a></div>
+
+        </div>
+    </div>
+    <div class="FixedHeightContainer">
+       
+       <h1 style="font-size: 50px;">Holiday Deals + Trip ideas</h1>
+       <p style="margin:0px;">Recommendations and savings to inspire your next holiday</p>
+       <h3 style="margin-top:60px;">Already have a destination in mind?</h3>
+       <div id="box1">
+      
+       <button class="col1" style="margin: 0px; border: 1px solid black; width: 25%;height: 100%;border-radius: 5px;margin-right:2% ;">
+        <i class="fas fa-building"  style="margin-left:15px;margin-top: 10px;"></i>
+
+       </button> 
+       
+           <button class="col1" style="margin: 0px; border: 1px solid black;width: 25%;height: 100%;border-radius: 5px;margin-right:2% ;">
+            <i class="fas fa-building"  style="margin-left:15px;margin-top: 10px;"></i></button>
+      
+           <button class="col1" style="margin: 0px; border: 1px solid black;width: 25%;height: 100%;border-radius: 5px;margin-right:2% ;">
+                <i class="fas fa-briefcase"  style="margin-left:15px;margin-top: 10px;"></i>
+           </button>
+       <button class="col1" style="margin: 0px; border: 1px solid black;width: 25%;height: 100%;border-radius: 5px;margin-right:2% ;">
+        <i class="fas fa-car-alt"   style="margin-left:15px;margin-top: 10px;"></i></button>
+       
+        <button class="col1" style="margin: 0px; border: 1px solid black;width: 25%;height: 100%;border-radius: 5px;margin-right:2% ;">
+            <i class="fas fa-digital-tachograph"   style="margin-left:15px;margin-top: 10px;"></i></button>
+        </div>
+       <div class="box2">
+           <p class="p1">Stays</p>
+           <p class="p1">Flights</p>
+           <p class="p1">Packages</p>
+           <p class="p1">Cars</p>
+           <p class="p1">Things to do</p>
+       </div>
+       <h1>Search Stays</h1>
+       <div class="box3">
+        <div  style=" height: 47px;width: 392px;border:black 0.5px solid;margin: 0px;" class="col2"><i class="fas fa-map-marker-alt"style="margin-left: 10px;margin-top: 15px;" ></i><p style="margin-left: 10px;margin-bottom: 2%;">Leaving from</p></div>
+        
+        <div class="col2">
+           <input style="height: 45px;width: 215px;border-radius: 0.5rem; border: none;" type="date" placeholder="Departing">
+        </div>
+        
+        <div class="col2">
+            <input style="height: 45px;width:215px;border-radius: 0.5rem ;border: none;" type="date" placeholder="Departing">
+         </div>
+        <div class="col2">
+            <div  style=" height: 47px;width: 392px;border:none;"  class="col2"><i class="fas fa-map-marker-alt"style="margin-left: 10px;margin-top: 15px;" ></i><p style="margin-left: 10px;"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Travellers</p>
+                <p style="margin-top: 30px;"> 1 room ,2 travellers</p>
+            </div>    
+        </div>
+       
+    </div>
+    <button class="button1">Search</button>
+ 
+       <div class="box4">
+           <div class=col4>
+               <p>Whether you’re a theatre-goer looking to see Broadway on affordable  <a href=""></a> holiday deals to New York, a sun-worshipper looking for cheap travel deals to Dubai or a history buff interested in booking holiday deals to Athens, Expedia has got you covered. As a matter of fact, when it comes to cheap travel deals, you’ll find plenty of bargains on a wide selection of destinations around the globe. From all-inclusive holiday deals to cheap hotel deals and 5-star holiday deals, we’ll put you where you want to be, and at a price that doesn’t break the bank.</p>
+               
+              <p>Book late holiday deals to Mexico to unwind and de-stress on the magnificent beaches, get away for a weekend of tapas and flamenco on travel deals to Spain or roll the dice on glitzy : Expedia offers perfect holiday deals for you and your family.</p>
+               
+               <h2 style="text-decoration: underline;">What do we mean by cheap deals?</h2>
+               
+               <a style="color: blue;" href="">Expedia makes it easy to put together the perfect and affordable trip, as you can make your cheap holiday deals even cheaper by booking a package or go big with an all-inclusive, or just go à la carte by booking cheap flight deals and cheap hotel deals separately. But no matter how you choose to put together your next adventure, Expedia’s travel deals and offers are sure to save you a bundle. Just click on through to see which offers for holidays catch your fancy.</a>
+   
+           </div>
+           <div class=col4>
+               <h2 style="text-decoration: underline;">What kinds of holiday can I get a deal on?</h2>
+               
+               <p>Whether you want to choose from our package deals and book holidays to Bali or just stay local with a domestic holiday deal, you can find the ideal getaway on Expedia.</p>
+               
+               <p>When it comes to late travel deals, nearby getaway cities are worth considering, as they offer the perfect opportunity to de-stress on city breaks, especially as you can book cheap hotel deals for just one or two nights. If you’re looking for something a little more epic, you’ll find a number of adventurous options, including travel deals to Thailand and offers on holidays to Ibiza.</p>
+               
+               <h2 style="text-decoration: underline;">How do I find the cheap travel deals?</h2>
+               
+               <p>Travel is the best thing that money can buy, and sometimes it can be expensive, but bagging a bargain on Expedia will allow you to splash out on local food and culture. Not only will you discover great holiday deals, you’ll find inspirations for bucket-list destinations.</p>
+               
+               <p>Just click on through and you’ll find a great selection of cheap holiday deals to suit all tastes and budgets. Last-minute deals and late travel deals offer fantastic savings, so book before they’re gone, and make sure to check back for new deals.</p>
+           </div>
+       </div>
+       <div class="box5">
+        <select style="color: blue;border: none;">
+            <option>Explore More Travel Deals</option>
+            <option style="color: black;">Hotel deals</option>
+            <option style="color: black;">Last-minute deal</option>
+            <option style="color: black;">Travel deals</option>
+            <option style="color: black;">Hotels with free cancellation</option>
+           
+        </select>
+       </div>
+       <div id="container">
+       <div class="box6">
+           <div class="col3">
+            <img style="height: 50%;width: 50%;margin-left: 13%;" src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg" alt="">
+
+           </div>
+           <div class="col3">
+               <p>Company</p>
+               <a style="color: blue;text-decoration: none;" href="">About Us</a>
+               <p></p>
+               <a style="color: blue;text-decoration: none;" href="">Jobs</a>
+               <p></p>
+               <a style="color: blue;text-decoration: none;" href="">List your property</a>
+               <p></p>
+               <a style="color: blue;text-decoration: none;" href="">Partnerships</a>
+               
+           </div>
+           <div class="col3">
+            <p>Explore</p>
+            <a style="color: blue;text-decoration: none;" href="">India travel guide</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">Hostels in India</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">Holiday rentals in India</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">Holiday Packages in India</a>
+            <a style="color: blue;text-decoration: none;" href="">domestic flights</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">Car hire in India</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="All accommodation types">About Us</a>
+            <a style="color: blue;text-decoration: none;" href="Travel Blog">About Us</a>
+              
+           </div>
+           <div class="col3">
+            <p>Terms and Policies</p>
+            <a style="color: blue;text-decoration: none;" href="">Privacy Statement</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">Terms of use</a>
+            <p></p>
+           </div>
+           <div class="col3">
+            <p>Help</p>
+            <a style="color: blue;text-decoration: none;" href="">Support</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">Change or cancel your booking</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">refund process and timelines</a>
+            <p></p>
+            <a style="color: blue;text-decoration: none;" href="">Book a flight using an airline credit</a>
+            <a style="color: blue;text-decoration: none;" href="">International travel documents</a>
+            <p></p>
+           </div>
+       </div>
+       <hr style="color: rgb(0, 255, 106);width: 80%;height: 1px;margin-top: 2%;">
+       <img style="margin-left: 45%;margin-top: 2%;" src="https://images.trvl-media.com/media/content/expind/images/sg/secure.png" alt="">
+       <p style="font-size:small;text-align: center;">© 2021 Expedia, Inc., an Expedia Group company / Expedia Asia Holdings Mauritius / BEX Travel Asia Pte. Ltd. All rights reserved. Expedia and the Airplane Logo are trademarks or registered trademarks of Expedia, Inc.</p>
+      
+
+    </div>
+
+</div>
+
+
+      
+</body>
+<script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+<script>
+   
+</script>
+</html>

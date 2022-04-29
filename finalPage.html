@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save more with Member Prices | Expedia</title>
+    <link rel="shortcut icon" href="download.png">
+    <link rel="stylesheet" href="expedia.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+    <style>
+      * {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+       #container1{
+            width: 100%;
+            margin: auto;
+        }
+        #uper{
+            width: 65%;
+            margin: 100px auto 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            /* border:1px solid springgreen; */
+        }
+       #uper>p:nth-child(1){
+        font-size: 56px;
+        font-weight: 500;
+        color: #141d38;
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        text-align: center;
+        text-decoration:none solid rgb(20, 29, 56);
+        margin: 0px;
+       }
+       #uper>p:nth-child(2){
+        font-size: 17px;
+        text-decoration:none solid rgb(52, 59, 83);
+        font-weight: 400;
+        color:#343b53;
+        margin: 12px 0px 0px;
+        line-height: 20px;
+        vertical-align: baseline;
+        font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+       }
+       .jion {
+           background-color: blue;
+           color: white;
+       }
+
+
+
+
+        #container {
+        width: 100%;
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: auto;
+        font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 20px;
+        /* border: .5px solid green; */
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+      #container>div:hover {
+        border-radius: 20px;
+        /* border: 1px solid gray; */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        /* display: flex; */
+        gap: 50px;
+        cursor: pointer;
+        transition:0.5s;
+      }
+      h2{
+          color: #141d38;
+          margin: 5px;
+      }
+      #avatar {
+        width: 100%;
+        height: 160px;
+        border-radius: 20px 20px 0px 0px;
+      }
+      #loc {
+          color: #57657e;
+          margin-top: 0px;
+          margin-left: 5px;
+          text-align:left;  
+      }
+      #off { 
+          margin: 0px;
+          margin-left: 300px; 
+          margin-top: 0px;
+          text-decoration-line: line-through;
+       }
+      #rat {
+          color: #373c57;
+          font-weight: 700;
+          font-size: 14px;
+          margin-left: 5px;
+          margin-top: -8px;
+      }
+      #pri {
+          color: #273652;
+          margin: 3px;
+          margin-left: 300px;
+          font-size: 22px;
+          font-weight: 800;
+      }
+      #dat {
+          color: #838998;
+          margin-left: 10px;
+          margin-top: -22px;
+          font-size: 12px;
+      }
+      #lin{
+            width: 75%;
+            color: black;
+            text-align:left;
+            margin-left:15px;
+            margin-top: 10px;
+            margin-bottom: -13px;
+        }
+      button{
+          margin-left: 280px;
+          margin-top: -50px;
+          padding: 5px 10px;
+            border: 0px;
+            background-color: #ffc94c;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div>button {
+          margin-left: 290px;
+        }
+      #night{
+          margin-top: 0px;
+          margin-left: 300px;
+          font-size: 12px;
+          color: #838998;
+      }
+      #priceSort {
+          margin: 50px 10px 10px 810px;
+          padding: 10px 50px 10px 10px;
+          font-size: 16px;
+          color: gray;
+          border-radius: 10px;
+          display: inline-block;
+          
+      }
+      #locationFilter {
+          padding: 10px 50px 10px 10px;
+          font-size: 16px;
+          color: gray;
+          border-radius: 10px;
+          height: 40px;
+          display: inline-block;
+      }
+      /* .st{
+        
+        
+      } */
+
+      @media only screen and (min-width:0px) and (max-width:320px){
+        #container {
+          align-items: center;
+            grid-template-columns: repeat(1,1fr);
+        }
+        #priceSort {
+          margin: 50px 10px 10px 50px;
+          padding: 10px 50px 10px 10px;
+          font-size: 16px;
+          color: gray;
+          border-radius: 10px;
+          display: inline-block;
+          position: relative;
+          
+      }
+        #locationFilter {
+          padding: 10px 50px 10px 10px;
+          margin: 50px 10px 10px 50px;
+          font-size: 16px;
+          color: gray;
+          border-radius: 10px;
+          height: 40px;
+          display: inline-block;
+          position: relative;
+      }
+    }
+        @media only screen and (min-width:321px) and (max-width:720px){
+        #container {
+          align-items: center;
+            grid-template-columns: repeat(2,1fr);
+        }
+        #priceSort {
+          margin: 50px 10px 10px 50px;
+          padding: 10px 50px 10px 10px;
+          font-size: 16px;
+          color: gray;
+          border-radius: 10px;
+          display: inline-block;
+          position: relative;
+          
+      }
+      #locationFilter {
+          padding: 10px 50px 10px 10px;
+          margin: 50px 10px 10px 50px;
+          font-size: 16px;
+          color: gray;
+          border-radius: 10px;
+          height: 40px;
+          display: inline-block;
+          position: relative;
+      }
+    }
+    /* #anc{
+      background-color: blue;
+    } */
+  </style>
+</head>
+<body>
+  <div id="fathercont">
+
+    <div id="nav">
+      <div id="navdiv">
+        <div style="margin-top: 5%;" onclick="window.location.href='home.html'">
+          <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2"alt="">
+  
+        </div>
+       
+  
+        <div class="dropdown">
+          <!-- <button  style="color: black;" class="drop">More Travel  <span class="material-icons">
+            expand_more
+            </span></button> -->
+            <div class="dropdownB">
+              <div id="dropone">
+                <div id="spandiv"><span class="material-icons">
+                  apartment</span></div>
+                <div><a onclick="window.location.href='stays.html'"> Stay </a></div>
+              </div>
+  
+  
+  
+              <div id="droptwo">
+                <div id="spandiv"><span class="material-icons">
+                  flight
+                  </span></div>
+                <div><a onclick="window.location.href='flights.html'"> Flight </a></div>
+              </div>
+  
+  
+              <div id="dropthree">
+                <div id="spandiv"> <span class="material-icons">
+                  directions_car
+                  </span></div>
+                <div><a onclick="window.location.href='cars.html'"> Cars </a></div>
+              </div>
+  
+  
+  
+              <div id="dropfour">
+                <div id="spandiv"><span class="material-icons">
+                  inventory_2
+                  </span></div>
+                <div><a onclick="window.location.href='packages.html'"> Packages </a></div>
+              </div>
+  
+  
+              <div id="dropfive">
+                <div id="spandiv"> <span class="material-icons">
+                  local_activity
+                  </span></div>
+                <div><a onclick="window.location.href='Holiday.html'">Holiday activities</a></div>
+              </div>
+  
+  
+              <div id="belowicon">
+                <div>
+                  <a >Deals</a>
+                  </div>
+                  <div>
+                    <a >Groups & Meetings </a>
+                    </div>
+                    <div>
+                      <a >Mobile</a>
+                      </div>
+              </div>
+            </div>
+              </div>
+  
+      </div>
+      <div id="navdiv2">
+   
+      <!-- <img src="globe.png" alt=""> -->
+      <span id="righticon" class="material-icons">
+        language
+        </span>
+        <a >English</a>   
+        <a >Support
+        </a>
+        <a >Trips</a>
+        <a  onclick="window.location.href='Signup.html'">Sign In</a>
+      
+      </div>
+      
+  
+    </div>
+    <hr>
+
+    <div id="container1">
+      <div id="uper">
+          <p id="bold">Enjoy your Member Prices</p>
+          <p id>Welcome back! We have reserved these stellar discounts especially for our Expedia Rewards members. Just look for the yellow Member Price tag, and you can enjoy instant savings worth 10% or more on select hotels, in addition to the points you will earn along the way on eligible bookings. Terms may apply.</p>
+          <button style="color: white;background-color: #2950b8;font-size: 18px;;padding: 8px 12px;border-radius: 10px;font-weight: 500; margin: auto;margin-top: 30px">Join Expedia Rewarda</button>
+          <p>Already a member?<span style="color:blue; cursor: pointer;" onclick="window.location.href='Signin.html'">Sign in</span></p>
+      </div>
+
+      
+  
+
+  <div class="st">
+    <select id="priceSort" onchange="handlePriceSort()">
+      <option value="">Sorted By Price</option>
+      <option value="high">High to Low</option>
+      <option value="low">Low to High</option>
+    </select>
+
+    <select id="locationFilter" onchange="filterPlace()">
+      <option value="">Choose location</option>
+      <option value="Agra">Agra</option>
+      <option value="Bandhograh">Bandhograh</option>
+      <option value="Bengaluru">Bengaluru</option>
+      <option value="Bhopal">Bhopal</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Goa">Goa</option>
+      <option value="Gurugram">Gurugram</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Indore">Indore</option>
+      <option value="Jaipur">Jaipur</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="New Delhi">New Delhi</option>
+      <option value="Raipur">Raipur</option>
+      <option value="Shimla">Shimla</option>
+    </select>   
+ </div>
+
+  
+  <div id="container" onclick="window.location.href='stayHotel.html'"> </div>
+ 
+
+
+
+  
+  <div id="foot"  >
+    <div>
+      <img
+      src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+      alt=""
+    />
+    </div>
+     
+      <div id="footerdiv1">
+        <p>Company</p>
+        <a >About us</a>
+        <a >Jobs</a>
+        <a >List your property</a>
+        <a >Partnerships</a>
+      </div>
+      <div id="footerdiv1">
+        <p>Explore</p>
+      <a>India travel guide </a>
+      <a >Hotels in India </a>
+      <a >Holiday rentals in India </a>
+      <a >Holiday packages in India </a>
+      <a >Domestic flights </a>
+      <a >Car hire in India </a>
+      <a >All accommodation types </a>
+      <a >Travel blog </a>
+      </div>
+      <div id="footerdiv1">
+        <p>Terms and Policies</p>
+        <a >Privacy Statement </a>
+        <a >Terms of use </a>
+      </div>
+      <div id="footerdiv1">
+        <p>Help</p>
+      <a >Support </a>
+      <a >Change or cancel your booking </a>
+      <a>Refund process and timelines </a>
+      <a >Book a flight using an airline credit </a>
+      <a >International travel documents </a>
+      </div>
+     </div>
+<hr>
+   <div id="secureimg">
+     <img src="secure.png" alt="">
+   </div>
+   <div id="endfoot">
+    <h6 >
+      © 2021 Expedia, Inc., an Expedia Group company / Expedia Asia Holdings Mauritius / BEX Travel Asia Pte. Ltd. All rights reserved. Expedia and the Airplane Logo are trademarks or registered trademarks of Expedia, Inc.
+
+     </h6>
+
+   </div>
+
+
+</div>
+  
+
+  
+
+
+  
+    
+</body>
+</html>
+<script>
+var expediaData = JSON.parse(localStorage.getItem("expediaData"))
+
+displayData(expediaData)
+
+function filterPlace() {
+   var selected=document.querySelector("#locationFilter").value
+   console.log(selected)
+
+   var filterList = expediaData.filter(function(elem) {
+     return elem.location == selected;
+   })
+
+   console.log(filterList)
+   displayData(filterList)
+ }
+
+ function handlePriceSort(){
+    var selected=document.querySelector("#priceSort").value;
+    // console.log(selected);
+
+    if(selected == "high"){
+      //decending
+      expediaData.sort(function(a,b){
+        return Number(b.price) - Number(a.price);
+      })
+    }
+    if((selected=="low")){
+      //acending
+      expediaData.sort(function (a,b) {
+        return Number(a.price) - Number(b.price);
+    })
+   }
+   console.log(expediaData);
+   displayData(expediaData);
+  }
+
+  function displayData(expediaData){
+      document.querySelector("#container").innerHTML=""
+      expediaData.map(function (elem) {
+    var div = document.createElement("div");
+
+    // document.querySelector("#div1")
+
+
+    var avatar = document.createElement("img");
+    avatar.setAttribute("src",elem.image);
+    avatar.setAttribute("id","avatar");
+    
+    var h2=document.createElement("h2");
+    h2.textContent=elem.name;
+
+    var h3=document.createElement("h3");
+    h3.textContent=elem.offer;
+    h3.setAttribute("id", "off");
+
+
+    var p2=document.createElement("p");
+    p2.textContent=elem.price;
+    p2.setAttribute("id", "pri");
+
+
+    var p3=document.createElement("p");
+    p3.textContent=elem.date;
+    p3.setAttribute("id", "dat");
+
+    var p1=document.createElement("p");
+    p1.textContent=elem.location;
+    p1.setAttribute("id", "loc");
+
+    var rat=document.createElement("p");
+    rat.textContent=elem.rating;
+    rat.setAttribute("id", "rat");
+
+    var lin=document.createElement("hr");
+    lin.textContent=elem.line;
+    lin.setAttribute("id","lin");
+
+    var btn= document.createElement("button");
+    btn.textContent="10% off";
+
+
+    var nigh=document.createElement("p")
+    nigh.textContent=elem.night;
+    nigh.setAttribute("id","night")
+
+    // document.querySelector(#div1)
+    
+    // document.querySelector("#div1")
+    // document.querySelector("#anc")
+    // var an=textContent=" i am here"
+
+    // div1.append(anc)
+
+
+    div.append(avatar,h2,p1,rat,lin,btn,h3,p2,nigh,p3);
+    document.querySelector("#container").append(div);
+});
+  }
+</script>
